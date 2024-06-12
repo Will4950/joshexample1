@@ -1,0 +1,37 @@
+@use 'sass:map';
+
+$theme-colors: (
+	'primary': #0b5cff,
+	'secondary': #474750,
+	'success': #27874c,
+	'info': #ff7a00,
+	'warning': #676774,
+	'danger': #e02828,
+	'light': #f4f4f6,
+	'dark': #0d2a4c
+);
+
+$enable-grid-classes: true;
+$enable-gradients: true;
+$enable-rounded: true;
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: map.get($theme-colors, 'primary');
+}
+
+a:hover {
+	color: map.get($theme-colors, 'info');
+}
+
+.hide {
+	display: none;
+}
